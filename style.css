@@ -44,7 +44,10 @@ body header section.logo img {
   width: 6vw;
   height: 6vh;
 }
-body header section.logo h1 {
+body header section.logo a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
   font-size: 2.5rem;
 }
 body header nav {
