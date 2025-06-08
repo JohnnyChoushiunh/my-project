@@ -1,0 +1,727 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+}
+body img.fixed-img {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -5;
+  bottom: 0;
+  left: 0;
+}
+body header {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 10px 6px -6px #777;
+}
+body header section.logo {
+  flex: 2 1 400px;
+  display: flex;
+  align-items: center;
+}
+body header section.logo img {
+  width: 6vw;
+  height: 6vh;
+}
+body header section.logo h1 {
+  font-size: 2.5rem;
+}
+body header nav {
+  flex: 5 1 500px;
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.35rem;
+  transition: all 0.2s ease;
+  padding-bottom: 0.3rem;
+}
+body header nav ul li a:hover {
+  color: rgba(153, 57, 255, 0.5);
+  border-bottom: 2px solid rgba(153, 57, 255, 0.5);
+}
+body main section.background-img {
+  min-height: 70vh;
+  background-image: url(./images/樂天世界塔.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: all 0.75s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.background-img div.filter {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 70vh;
+  position: absolute;
+  z-index: -1;
+}
+body main section.background-img h3 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+body main section.info-circles {
+  background-color: white;
+  padding: 2rem 1rem;
+}
+body main section.info-circles h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+body main section.info-circles div.circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body main section.info-circles div.circles div.circle {
+  padding: 1rem;
+  flex: 0 1 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main section.info-circles div.circles div.circle a {
+  text-align: center;
+}
+body main section.info-circles div.circles div.circle a img {
+  width: 80%;
+  border-radius: 50%;
+  padding: 0.3rem;
+  transition: all 0.1s ease;
+}
+body main section.info-circles div.circles div.circle a img:hover {
+  border: 3px solid rgba(153, 57, 255, 0.5);
+}
+body main section.empty-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+body main section.empty-container h3 {
+  font-size: 2rem;
+  color: white;
+}
+body main section.google-map {
+  background-color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+body main section.google-map h3 {
+  font-size: 2.5rem;
+}
+body main section.google-map p {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+body main section.google-map iframe {
+  height: 40vh;
+  width: 100%;
+}
+body main section.busan-main {
+  min-height: 70vh;
+  background-image: url(./images/釜山海景.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.busan-main div.filter2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+body main section.busan-main div.main-area {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main section.busan-main div.main-area div.info {
+  flex-basis: 450px;
+  padding: 1rem;
+}
+body main section.busan-main div.main-area div.info h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+body main section.busan-main div.main-area div.info h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+body main section.busan-main div.main-area div.info a {
+  color: white;
+  font-size: 1.5rem;
+}
+body main section.busan-main div.main-area div.info p {
+  color: white;
+  font-size: 1.5rem;
+  display: inline;
+}
+body main section.busan-main div.main-area div.info a.button {
+  background-color: #4169e1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+body main section.busan-main div.main-area div.info a.button:hover {
+  transform: scale(1.2);
+}
+body main section.busan-main div.main-area div.img-area {
+  flex-basis: 450px;
+}
+body main section.busan-main div.main-area div.img-area img {
+  width: 100%;
+}
+body main section.sight {
+  scroll-margin-top: 80px;
+  flex-direction: column;
+  padding: 5rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main section.sight h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+body main section.sight div.sight-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.sight div.sight-info a {
+  color: black;
+  font-size: 1rem;
+  border: 1px solid black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+body main section.sight div.sight-info a:hover {
+  transform: scale(1.2);
+  background-color: #eeeae7;
+}
+body main section.Hd {
+  scroll-margin-top: 80px;
+  background-color: #e3f2f1;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+body main section.Hd div.Hd-info {
+  margin: 5rem 1rem;
+  flex-basis: min(40%, 1500px);
+}
+body main section.Hd div.Hd-info h3 {
+  line-height: 1;
+  padding-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+body main section.Hd div.Hd-info p {
+  font-size: 1rem;
+}
+body main section.Hd div.Hd-img {
+  margin: 5rem 1rem;
+  flex-basis: min(40%, 1500px);
+}
+body main section.Hd div.Hd-img img {
+  width: 100%;
+}
+body main section.Gc {
+  scroll-margin-top: 80px;
+  min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+body main section.Gc div.Gc-info {
+  margin: 5rem 1rem;
+  flex-basis: min(40%, 1500px);
+}
+body main section.Gc div.Gc-info h3 {
+  line-height: 1;
+  padding-top: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+body main section.Gc div.Gc-info p {
+  font-size: 1rem;
+}
+body main section.Gc div.Gc-img {
+  margin: 5rem 1rem;
+  flex-basis: min(40%, 1500px);
+}
+body main section.Gc div.Gc-img img {
+  width: 100%;
+}
+body main section.JingFu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+body main section.JingFu h2 {
+  background-color: white;
+  margin: 2rem 0rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 85vw;
+}
+body main section.JingFu div.JingFu-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  width: 85vw;
+}
+body main section.JingFu div.JingFu-main div.top-img {
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+body main section.JingFu div.JingFu-main div.top-img img {
+  width: 70%;
+}
+body main section.JingFu div.JingFu-main nav {
+  width: 95%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.5px solid gray;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+body main section.JingFu div.JingFu-main nav a {
+  padding-left: 1rem;
+  margin-right: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: gray;
+  transition: all 0.2s ease;
+}
+body main section.JingFu div.JingFu-main nav a:hover {
+  color: #ff6347;
+}
+body main section.JingFu div.JingFu-main div.introduction {
+  scroll-margin-top: 4rem;
+  margin-top: 2rem;
+  padding: 0rem 1.5rem;
+}
+body main section.JingFu div.JingFu-main div.introduction ul li {
+  margin: 0.5rem 1rem;
+}
+body main section.JingFu div.JingFu-main div.info {
+  scroll-margin-top: 4rem;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0rem 1.5rem;
+}
+body main section.JingFu div.JingFu-main div.info h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+body main section.JingFu div.JingFu-main div.info h4 i {
+  margin-right: 1rem;
+  color: #8d11e1;
+}
+body main section.JingFu div.JingFu-main div.info p {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+body main section.JingFu div.JingFu-main div.info a {
+  display: inline-block;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+body main section.JingFu div.JingFu-main div.map {
+  scroll-margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+}
+body main section.JingFu div.JingFu-main div.map h3 {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+body main section.JingFu div.JingFu-main div.map iframe {
+  width: 95%;
+  margin-bottom: 2rem;
+}
+body main section.skyCapsule-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  min-height: 70vh;
+}
+body main section.skyCapsule-top h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+body main section.skyCapsule-top div.top-img {
+  width: 60vw;
+}
+body main section.skyCapsule-top div.top-img img {
+  width: 100%;
+}
+body main section.skyCapsule-top p {
+  margin-top: 1rem;
+  width: 60vw;
+}
+body main section.skyCapsule-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+body main section.skyCapsule-main nav {
+  width: 60vw;
+}
+body main section.skyCapsule-main nav h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body main section.skyCapsule-main nav ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+body main section.skyCapsule-main nav ul li a {
+  text-decoration: none;
+  color: #4169e1;
+}
+body main section.skyCapsule-main nav ul li a:hover {
+  color: #ff6347;
+}
+body main section.skyCapsule-main div.skyCapsule-info {
+  scroll-margin-top: 4rem;
+  margin-top: 2rem;
+  width: 60vw;
+}
+body main section.skyCapsule-main div.skyCapsule-info h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: #4169e1;
+}
+body main section.skyCapsule-main div.skyCapsule-info h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.skyCapsule-info p {
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.skyCapsule-info ul {
+  padding-left: 1rem;
+}
+body main section.skyCapsule-main div.skyCapsule-info table {
+  margin: 1rem 0rem;
+  text-align: center;
+  border-collapse: collapse;
+}
+body main section.skyCapsule-main div.skyCapsule-info table th,
+body main section.skyCapsule-main div.skyCapsule-info table td {
+  padding: 0.25rem;
+  border: 1px solid black;
+}
+body main section.skyCapsule-main div.beachTrain {
+  scroll-margin-top: 4rem;
+  margin-top: 2rem;
+  width: 60vw;
+}
+body main section.skyCapsule-main div.beachTrain h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: #4169e1;
+}
+body main section.skyCapsule-main div.beachTrain h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.beachTrain p {
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.beachTrain ul {
+  padding-left: 1rem;
+}
+body main section.skyCapsule-main div.beachTrain table {
+  margin: 1rem 0rem;
+  text-align: center;
+  border-collapse: collapse;
+}
+body main section.skyCapsule-main div.beachTrain table th,
+body main section.skyCapsule-main div.beachTrain table td {
+  padding: 0.25rem;
+  border: 1px solid black;
+}
+body main section.skyCapsule-main div.beachTrain div.beachTrain-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body main section.skyCapsule-main div.beachTrain div.beachTrain-img img {
+  width: 60%;
+}
+body main section.skyCapsule-main div.reservation {
+  scroll-margin-top: 4rem;
+  margin-top: 2rem;
+  width: 60vw;
+}
+body main section.skyCapsule-main div.reservation h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: #4169e1;
+}
+body main section.skyCapsule-main div.reservation p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+body main section.skyCapsule-main div.reservation div.reservation-img {
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.reservation div.reservation-img img {
+  width: 100%;
+}
+body main section.skyCapsule-main div.reservation div.cancel-img {
+  margin-bottom: 1rem;
+}
+body main section.skyCapsule-main div.reservation div.cancel-img img {
+  width: 100%;
+}
+body main section.food-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  min-height: 70vh;
+}
+body main section.food-top h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+body main section.food-top div.top-img {
+  width: 60vw;
+}
+body main section.food-top div.top-img img {
+  width: 100%;
+}
+body main section.food-top p {
+  margin-top: 1rem;
+  width: 60vw;
+}
+body main section.food-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+body main section.food-main nav {
+  width: 60vw;
+}
+body main section.food-main nav h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+body main section.food-main nav ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+body main section.food-main nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+body main section.food-main nav ul li a:hover {
+  color: #ffa07a;
+}
+body main section.food-main div.bbq {
+  scroll-margin-top: 4rem;
+  margin: 2rem 0rem;
+  width: 60vw;
+}
+body main section.food-main div.bbq h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: white;
+  background-color: #ffa07a;
+}
+body main section.food-main div.bbq p {
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+body main section.food-main div.bbq div.bbq-img {
+  margin-bottom: 1rem;
+}
+body main section.food-main div.bbq div.bbq-img img {
+  width: 100%;
+}
+body main section.food-main div.bbq ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+body main div.login-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main div.login-container div.login-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+body main div.login-container div.login-box h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+body main div.login-container div.login-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+body main div.login-container div.login-box button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #2d85f0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+body main div.login-container div.login-box button:hover {
+  background-color: #1a6fe0;
+}
+body footer {
+  display: flex;
+  padding: 2rem;
+  color: white;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+body footer section.logo img {
+  width: 20vw;
+}
+body footer section.logo h3 {
+  font-size: 2.5rem;
+}
+body footer section.links {
+  margin-top: 2rem;
+}
+body footer section.links a img {
+  width: 5vw;
+  margin: 0 rem 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  body header section.logo img {
+    height: 13vh;
+    width: 13vw;
+  }
+  body header nav ul {
+    flex-direction: column;
+  }
+  body header nav ul li {
+    padding: 0.5rem 0.25rem;
+  }
+  body main section.JingFu div.JingFu-main div.top-img img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  body main section.Hd {
+    flex-direction: column;
+  }
+  body main section.Gc {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
